@@ -5,6 +5,15 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<h1>hello</h1>
+	<h1>Login Page</h1>
+	<ul>
+		<form action="/index/login" method="post">
+			<li>ユーザー名<input type="text" name="name"></li>
+			<li th:text="${validName}">ユーザー名が違います。メールアドレスを入力して下さい。</li>
+			<li>パスワード<input type="password" name="pass"></li>
+			<li th:text="${validPass}">パスワードが違います。英数文字のみ、８文字以上、１２文字以下で入力して下さい。</li>
+			<li><input type="submit" value="login"></li>
+		</form>
+	</ul>
 </body>
 </html>
