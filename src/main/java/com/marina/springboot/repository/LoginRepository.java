@@ -7,5 +7,5 @@ import com.marina.springboot.User;
 
 @Repository
 public interface LoginRepository extends JpaRepository<User, Integer> {
-
+	
 }
