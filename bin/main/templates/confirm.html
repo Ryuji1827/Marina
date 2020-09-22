@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<h1>こちらでお間違えないですか？</h1>
+	<form action="/login/main/confirm/post" method="post">
+		<p>投稿者：<span th:text="${author}"></span></p>
+		<p>タイトル：<span th:text="${title}"></span></p>
+		<p>本文：<span th:text="${mainText}"></span></p>
+		<p>画像：<span th:text="${image}"></span></p>
+		<input type="hidden" name="id" value=${id}>
+	</form>
+</body>
+</html>

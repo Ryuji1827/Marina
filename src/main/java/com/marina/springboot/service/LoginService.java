@@ -26,4 +26,14 @@ public class LoginService {
 		}
 		return false;
 	}
+	
+	public int getId(String name) {
+		List<Users> users = loginRepository.findAll();
+		for(Users user : users) {
+			if(name.equals(user.getName())) {
+				return user.getId();
+			}
+		}
+		return 0;	
+	}
 }

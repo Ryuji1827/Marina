@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<h1>投稿文を作成</h1>
+	<form action="/login/main/confirm" method="POST">
+		<p>投稿者<input type="text" name="author"></p>
+		<p>タイトル<input type="text" name="title"></p>
+		<p>本文</p>
+		<p><textarea name="mainText" rows="10" cols="40"></textarea></p>
+		<p>画像<input type="file" name="image" enctype="multipart/form-data"></p>
+		<p><input type="submit" value="投稿"></p>
+	</form>
+</body>
+</html>
