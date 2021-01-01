@@ -1,18 +1,27 @@
 <!DOCTYPE html>
-<html>
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
 </head>
 <body>
-	<h1>投稿文を作成</h1>
-	<form action="/login/main/confirm" method="POST">
-		<p>投稿者<input type="text" name="author"></p>
-		<p>タイトル<input type="text" name="title"></p>
-		<p>本文</p>
-		<p><textarea name="mainText" rows="10" cols="40"></textarea></p>
-		<p>画像<input type="file" name="image" enctype="multipart/form-data"></p>
-		<p><input type="submit" value="投稿"></p>
-	</form>
+	<h1>メインページ</h1>
+		<ul>
+		 	<li>
+				<a href="/main/post">
+					<button type="button">投稿</button>
+				</a>
+			</li>
+			<li>
+				<a href="/main/edit/?id=4">
+					<button type="button">編集</button>
+				</a>
+			</li>
+			<li>
+				<a href="/main/delete">
+					<button type="button">削除</button>
+				</a>
+			</li>
+		</ul>
 </body>
 </html>

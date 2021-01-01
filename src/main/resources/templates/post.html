@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<h1>投稿ページ</h1>
+	<form action="/main/post/done" method="POST" enctype="multipart/form-data">
+		<p>タイトル<input type="text" name="title"></p>
+		<p>本文</p>
+		<p><textarea name="mainText" rows="10" cols="40"></textarea></p>
+		<p>画像<input type="file" name="image"></p>
+		<p><input type="submit" value="投稿"></p>
+	</form>
+</body>
+</html>

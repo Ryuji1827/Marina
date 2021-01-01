@@ -1,17 +1,17 @@
 <!DOCTYPE html>
-<html>
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
 </head>
 <body>
 	<h1>こちらでお間違えないですか？</h1>
-	<form action="/login/main/confirm/post" method="post">
-		<p>投稿者：<span th:text="${author}"></span></p>
+	<form action="/main/post/confirm/done" method="POST" enctype="multipart/form-data">
 		<p>タイトル：<span th:text="${title}"></span></p>
 		<p>本文：<span th:text="${mainText}"></span></p>
-		<p>画像：<span th:text="${image}"></span></p>
-		<input type="hidden" name="id" value=${id}>
+		<!-- <p>画像：<span th:text="${image}"></span></p> -->
+		<input type="hidden" name="image" value="${image}">
+		<p><input type="submit" value="確定"></p>
 	</form>
 </body>
 </html>

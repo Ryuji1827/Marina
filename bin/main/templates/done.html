@@ -5,10 +5,9 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<p>ようこそ<span th:text="${validName}"></span>さん</p>
-	<p>PASSWORD:<span th:text="${validPass}"></span></p>
-	<a href="/main">
+	<p th:text="|${did}しました|"></p>
+	<p><a href="/main">
     	<button type="button">メインページへ</button>
-	</a>
+	</a></p>
 </body>
 </html>

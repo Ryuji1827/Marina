@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<h1>編集ページ</h1>
+	<form action="/main/edit/confirm" method="POST" enctype="multipart/form-data">
+		<p>タイトル<input type="text" name="edit_title" th:value="${title}"></p>
+		<p>本文</p>
+		<p><textarea name="edit_mainText" rows="10" cols="40" th:text="${mainText}"></textarea></p>
+		<p>画像<input type="file" name="image"></p>
+		<img th:src="@{'../resources/static/upload/' + ${image}}">
+	<!-- 	<input type="hidden" name="_method" value="PUT">  -->
+		<p><input type="submit" value="確認画面へ"></p>
+	</form>
+</body>
+</html>
