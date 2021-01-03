@@ -52,7 +52,7 @@ public class ConfirmService {
         confirmRepository.save(posts);	   
 	}
 
-	private String savefile(MultipartFile file) {
+	public String savefile(MultipartFile file) {
 		 String filename = getUploadFileName();
 	     Path uploadfile = Paths.get("/Users/ryuji/MarinaApp/src/main/resources/static/upload/" + filename);
 	        try (OutputStream os = Files.newOutputStream(uploadfile, StandardOpenOption.CREATE)) {

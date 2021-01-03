@@ -53,19 +53,19 @@ public class PostController {
 		return "done";
 	}
 	
-	@RequestMapping(value = "/main/post/confirm/done", method = RequestMethod.POST)
-	public String insert(Model model) {
-		
-		int author_id = (int) session.getAttribute("login_id");
-		String post_title = (String) session.getAttribute("title");
-		String post_mainText = (String) session.getAttribute("mainText");
-		MultipartFile image = (MultipartFile) session.getAttribute("image");
-		model.addAttribute("did", "投稿");
-		try {
-			confirmService.doInsert(post_title, post_mainText, image, author_id);
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
-		return "done";
-	}
+//	@RequestMapping(value = "/main/post/confirm/done", method = RequestMethod.POST)
+//	public String insert(Model model) {
+//		
+//		int author_id = (int) session.getAttribute("login_id");
+//		String post_title = (String) session.getAttribute("title");
+//		String post_mainText = (String) session.getAttribute("mainText");
+//		MultipartFile image = (MultipartFile) session.getAttribute("image");
+//		model.addAttribute("did", "投稿");
+//		try {
+//			confirmService.doInsert(post_title, post_mainText, image, author_id);
+//		} catch (IOException e) {
+//			e.printStackTrace();
+//		}
+//		return "done";
+//	}
 }
