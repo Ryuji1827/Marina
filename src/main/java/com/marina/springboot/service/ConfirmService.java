@@ -53,6 +53,10 @@ public class ConfirmService {
 	}
 
 	public String savefile(MultipartFile file) {
+		if (file == null) {
+	    	LogUtils.info("画像データがありません。");
+	    	return null;
+	    }
 		 String filename = getUploadFileName();
 	     Path uploadfile = Paths.get("/Users/ryuji/MarinaApp/src/main/resources/static/upload/" + filename);
 	        try (OutputStream os = Files.newOutputStream(uploadfile, StandardOpenOption.CREATE)) {

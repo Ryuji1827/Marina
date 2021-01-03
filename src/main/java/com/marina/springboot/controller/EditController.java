@@ -69,17 +69,17 @@ public class EditController {
 //		return "confirm";
 //	}
 	
-	@RequestMapping(value = "/main/edit/done", method = RequestMethod.GET)
+	@RequestMapping(value = "/main/edit/done", method = RequestMethod.POST)
 	public String update(Model model
 			,@RequestParam(name = "edit_title")String edit_title
 			,@RequestParam(name = "edit_mainText")String edit_mainText
 			,@RequestParam(name = "image") MultipartFile image) {
-				int edit_id = (int)session.getAttribute("edit_id");
+				int edit_id = (int)session.getAttribute("id");
 				int edit_author_id = (int) session.getAttribute("login_id");
 
 				String image_name = confirmService.savefile(image);
 				if(edit_id != 0) {
-					model.addAttribute("did", "編集しました");
+					model.addAttribute("did", "編集");
 					editService.update(edit_title, edit_mainText, image_name, edit_author_id, edit_id);
 				}
 					return "done";
