@@ -33,8 +33,8 @@ public class EditController {
 	@Autowired
 	HttpSession session;
 	
-	@RequestMapping(value = "/main/edit/{id}", method = RequestMethod.GET)
-	public String edit(@PathVariable("id") int id, Model model) {
+	@RequestMapping(value = "/main/edit", method = RequestMethod.GET)
+	public String edit(@RequestParam(defaultValue = "0") int id, Model model) {
 		Optional<Posts> post = Optional.ofNullable(confirmRepository.findById(id));
 		Posts cpost = post.get();
 	
